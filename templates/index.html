@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Submission Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 800px;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #343a40;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .form-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        .form-control {
+            border-radius: 8px;
+            border: 1px solid #ced4da;
+            padding: 10px;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004085;
+        }
+        .form-textarea {
+            height: 120px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Information Submission Form</h2>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="name" class="form-label">پوسٹ نام</label>
+                <input type="text" class="form-control" id="name" name="name" required placeholder="مثال: بلال">
+            </div>
+
+            <div class="form-group">
+                <label for="fatherName" class="form-label">والد کا نام</label>
+                <input type="text" class="form-control" id="fatherName" name="fatherName" required placeholder="مثال: والد کا نام">
+            </div>
+
+            <div class="form-group">
+                <label for="caste" class="form-label">ذات</label>
+                <input type="text" class="form-control" id="caste" name="caste" required placeholder="مثال: جٹ">
+            </div>
+
+            <div class="form-group">
+                <label for="contact" class="form-label">رابطہ نمبر</label>
+                <input type="text" class="form-control" id="contact" name="contact" required placeholder="مثال: 1234567890">
+            </div>
+
+            <div class="form-group">
+                <label for="religion" class="form-label">مذہب</label>
+                <input type="text" class="form-control" id="religion" name="religion" required placeholder="مثال: اسلام">
+            </div>
+
+            <div class="form-group">
+                <label for="profession" class="form-label">پیشہ</label>
+                <input type="text" class="form-control" id="profession" name="profession" required placeholder="مثال: استاد">
+            </div>
+
+            <div class="form-group">
+                <label for="birthDate" class="form-label">پیدائش کی تاریخ</label>
+                <input type="date" class="form-control" id="birthDate" name="birthDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthPlace" class="form-label">پیدائش کی جگہ</label>
+                <input type="text" class="form-control" id="birthPlace" name="birthPlace" required placeholder="مثال: لاہور">
+            </div>
+
+            <div class="form-group">
+                <label for="address" class="form-label">پتہ- مستقل-عارضی</label>
+                <input type="text" class="form-control" id="address" name="address" required placeholder="مثال: لاہور، پاکستان">
+            </div>
+
+            <div class="form-group">
+                <label for="nationality" class="form-label">نیشلٹی</label>
+                <input type="text" class="form-control" id="nationality" name="nationality" required placeholder="مثال: پاکستانی">
+            </div>
+
+            <div class="form-group">
+                <label for="idCard" class="form-label">شناحتی کارڈ نمبر</label>
+                <input type="text" class="form-control" id="idCard" name="idCard" required placeholder="مثال: 12345-1234567-1">
+            </div>
+
+            <div class="form-group">
+                <label for="passportNumber" class="form-label">پاسپورٹ نمبر - ایشوہونے کی تاریخ</label>
+                <input type="text" class="form-control" id="passportNumber" name="passportNumber" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="education" class="form-label">تعلیم</label>
+                <input type="text" class="form-control" id="education" name="education" required placeholder="مثال: بی اے">
+            </div>
+
+            <div class="form-group">
+                <label for="language" class="form-label">زبان</label>
+                <input type="text" class="form-control" id="language" name="language" required placeholder="مثال: اردو، انگریزی">
+            </div>
+
+            <div class="form-group">
+                <label for="parentsProfession" class="form-label">والدین کا پیشہ</label>
+                <input type="text" class="form-control" id="parentsProfession" name="parentsProfession" required placeholder="مثال: کسان">
+            </div>
+
+            <div class="form-group">
+                <label for="spouseChildrenDetails" class="form-label">بیوی اور بچوں کی تفصیل</label>
+                <textarea class="form-control form-textarea" id="spouseChildrenDetails" name="spouseChildrenDetails" placeholder="مثال: بیوی کا نام، بچے" required>بیوی کا نام بلال اور بچے علی اور فاطمہ</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="familyDetails" class="form-label">باپ،ماں اور بہن بھائی کی تفصیل</label>
+                <textarea class="form-control form-textarea" id="familyDetails" name="familyDetails" placeholder="مثال: والد کا نام، ماں کا نام" required>والد کا نام احمد، ماں کا نام مریم</textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="famousPersonRelation" class="form-label">کسی مشہور شخصیت کے ساتھ تعلق</label>
+                <input type="text" class="form-control" id="famousPersonRelation" name="famousPersonRelation" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="friendReference" class="form-label">دو دوستوں کا حوالہ</label>
+                <input type="text" class="form-control" id="friendReference" name="friendReference" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="criminalRecord" class="form-label">مجرمانہ ریکارڈ</label>
+                <input type="text" class="form-control" id="criminalRecord" name="criminalRecord" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="generalCharacter" class="form-label">عام کردار</label>
+                <input type="text" class="form-control" id="generalCharacter" name="generalCharacter" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="assets" class="form-label">اثاثہ-زمین</label>
+                <input type="text" class="form-control" id="assets" name="assets" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="politicalAffiliation" class="form-label">سیاسی وابستگی ذاتی، بیٹے بیٹیوں و والدین</label>
+                <input type="text" class="form-control" id="politicalAffiliation" name="politicalAffiliation" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="councilorReport" class="form-label">ایریا کے کونسلرکی طرف سے دی کئی رپورٹ</label>
+                <input type="text" class="form-control" id="councilorReport" name="councilorReport" placeholder="اگر ہو تو درج کریں">
+            </div>
+
+            <div class="form-group">
+                <label for="remarks" class="form-label">ریمارکس</label>
+                <textarea class="form-control form-textarea" id="remarks" name="remarks" placeholder="اگر ہو تو درج کریں"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
